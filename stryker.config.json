@@ -1,0 +1,20 @@
+
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "testRunner": "mocha",
+  "coverageAnalysis": "perTest",
+  "mutate": [
+    "middleware/authMiddleware.js"
+  ],
+  "mochaOptions": {
+    "spec": [
+      "test/baseline-ai/authMiddleware.ai.test.js"
+    ]
+  },
+  "concurrency": 1,
+  "reporters": [
+    "clear-text",
+    "html",
+    "json"
+  ]
+}
