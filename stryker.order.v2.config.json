@@ -1,0 +1,12 @@
+
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "testRunner": "mocha",
+  "coverageAnalysis": "perTest",
+  "mutate": ["models/orderModel.js"],
+  "mochaOptions": {
+    "spec": ["test/orderModel.hybrid.test.js"]
+  },
+  "concurrency": 1,
+  "reporters": ["clear-text", "html", "json"]
+}
