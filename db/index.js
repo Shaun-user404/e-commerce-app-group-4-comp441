@@ -8,9 +8,9 @@ if (!connectionString) {
 
 const pool = new Pool({
   connectionString: connectionString,
-  ssl: {
-    rejectUnauthorized: false
-  }
+ssl: process.env.DATABASE_SSL === 'false'
+  ? false
+  : { rejectUnauthorized: false }
 });
 
 module.exports = {
